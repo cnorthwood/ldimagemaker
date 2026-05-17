@@ -16,14 +16,14 @@ const OVERLAYS: Overlay[] = [
     scalepos: [1, 1, 1.0, 1.0],
   },
   {
-    name: "Yellow Flag",
+    name: "Orange Flag",
     url: new URL("overlays/ld-banner.png", window.location.href + "/").pathname,
-    scalepos: [1, 0, 1.0, 1.0],
+    scalepos: [0.95, 0, 0.4, 0.4],
   },
   {
     name: "Leeds Lib Dems Logo",
     url: new URL("overlays/leeds-lib-dems.png", window.location.href + "/").pathname,
-    scalepos: [1, 1, 0.2, 0.2],
+    scalepos: [0.95, 1, 0.2, 0.2],
   },
   {
     name: "Triangles",
