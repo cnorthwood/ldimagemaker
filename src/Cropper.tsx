@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FunctionComponent, useCallback, useState } from "react";
 import ReactCrop, { PercentCrop } from "react-image-crop";
 
-import "react-image-crop/lib/ReactCrop.scss";
+import "react-image-crop/src/ReactCrop.scss";
 
 const Cropper: FunctionComponent<{
   imageUrl: string;
