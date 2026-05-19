@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FunctionComponent, useCallback, useState } from "react";
-import ReactCrop, { PercentCrop } from "react-image-crop";
+import ReactCrop, { PercentCrop, makeAspectCrop } from "react-image-crop";
 
 import "react-image-crop/src/ReactCrop.scss";
 
@@ -30,13 +30,13 @@ const Cropper: FunctionComponent<{
     setCrop({ x: 0, y: 0, width: 100, height: 100, unit: "%" });
   }, [setCrop]);
   const facebookCrop = useCallback(() => {
-    setCrop({ x: 0, y: 0, unit: "%", width: 50, height: 50 });
+    setCrop(makeAspectCrop({ unit: "%", width: 50 }, 1200 / 628, 100, 100));
   }, [setCrop]);
   const twitterCrop = useCallback(() => {
-    setCrop({ x: 0, y: 0, unit: "%", width: 50, height: 50 });
+    setCrop(makeAspectCrop({ unit: "%", width: 50 }, 1200 / 675, 100, 100));
   }, [setCrop]);
   const instaCrop = useCallback(() => {
-    setCrop({ x: 0, y: 0, unit: "%", width: 50, height: 50 });
+    setCrop(makeAspectCrop({ unit: "%", width: 50 }, 1, 100, 100));
   }, [setCrop]);
 
   return (
