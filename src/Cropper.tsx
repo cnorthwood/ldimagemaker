@@ -1,7 +1,7 @@
 import React, { ChangeEvent, FunctionComponent, useCallback, useState } from "react";
-import ReactCrop, { PercentCrop } from "react-image-crop";
+import ReactCrop, { PercentCrop, makeAspectCrop } from "react-image-crop";
 
-import "react-image-crop/lib/ReactCrop.scss";
+import "react-image-crop/src/ReactCrop.scss";
 
 const Cropper: FunctionComponent<{
   imageUrl: string;
@@ -30,13 +30,13 @@ const Cropper: FunctionComponent<{
     setCrop({ x: 0, y: 0, width: 100, height: 100, unit: "%" });
   }, [setCrop]);
   const facebookCrop = useCallback(() => {
-    setCrop({ aspect: 1200 / 628, unit: "%", height: 50 });
+    setCrop(makeAspectCrop({ unit: "%", width: 50 }, 1200 / 628, 100, 100));
   }, [setCrop]);
   const twitterCrop = useCallback(() => {
-    setCrop({ aspect: 1200 / 675, unit: "%", height: 50 });
+    setCrop(makeAspectCrop({ unit: "%", width: 50 }, 1200 / 675, 100, 100));
   }, [setCrop]);
   const instaCrop = useCallback(() => {
-    setCrop({ aspect: 1, unit: "%", height: 50 });
+    setCrop(makeAspectCrop({ unit: "%", width: 50 }, 1, 100, 100));
   }, [setCrop]);
 
   return (
@@ -58,7 +58,9 @@ const Cropper: FunctionComponent<{
         <>
           <div className="control">
             <div className="field">
-              <ReactCrop src={imageUrl} crop={crop} onChange={saveCrop} />
+              <ReactCrop aspect={1} crop={crop} onChange={saveCrop}>
+                <img src={imageUrl} alt="Crop me" />
+              </ReactCrop>
             </div>
           </div>
           <div className="control">

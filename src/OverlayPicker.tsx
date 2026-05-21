@@ -16,14 +16,9 @@ const OVERLAYS: Overlay[] = [
     scalepos: [1, 1, 1.0, 1.0],
   },
   {
-    name: "Yellow Flag",
+    name: "Orange Flag",
     url: new URL("overlays/ld-banner.png", window.location.href + "/").pathname,
-    scalepos: [1, 0, 1.0, 1.0],
-  },
-  {
-    name: "Stop Brexit",
-    url: new URL("overlays/ld-logotype.png", window.location.href + "/").pathname,
-    scalepos: [1, 1, 1.0, 1.0],
+    scalepos: [0.95, 0, 0.4, 0.4],
   },
   {
     name: "Triangles",
@@ -31,19 +26,24 @@ const OVERLAYS: Overlay[] = [
     scalepos: [1, 1, 1.0, 1.0],
   },
   {
-    name: "Main Party Logo",
+    name: "Primary Black Party Logo",
     url: new URL("overlays/main-ld-logo.png", window.location.href + "/").pathname,
-    scalepos: [0.95, 0.95, 0.2, 0.2],
+    scalepos: [0.95, 0.95, 0.25, 0.25],
   },
   {
-    name: "White Party Logo",
-    url: new URL("overlays/white-text-yellow-bird.png", window.location.href + "/").pathname,
-    scalepos: [0.95, 0.95, 0.2, 0.2],
+    name: "Primary White Party Logo",
+    url: new URL("overlays/white-text-orange-bird.png", window.location.href + "/").pathname,
+    scalepos: [0.95, 0.95, 0.25, 0.25],
   },
   {
-    name: "Charcoal Party Logo",
+    name: "Mono Charcoal Party Logo",
     url: new URL("overlays/charcoal-ld-logo.png", window.location.href + "/").pathname,
-    scalepos: [0.95, 0.95, 0.2, 0.2],
+    scalepos: [0.95, 0.95, 0.25, 0.25],
+  },
+  {
+    name: "Mono White Party Logo",
+    url: new URL("overlays/LiberalDemocrats_MonoWhite.png", window.location.href + "/").pathname,
+    scalepos: [0.95, 0.95, 0.25, 0.25],
   },
 ];
 

@@ -26,11 +26,13 @@ const TextEditor: FunctionComponent<{
               onChange(text, ev.currentTarget.value, backgroundColour);
             }}
           >
-            <option value="#151721">Charcoal</option>
-            <option value="#faa61a">Yellow</option>
+            <option value="#ff6400">Democrat Orange</option>
+            <option value="#ff0075">Community Magenta</option>
             <option value="#ffffff">White</option>
-            <option value="#072f5f">Navy</option>
-            <option value="#f95f53">Coral</option>
+            <option value="#072f5f">Liberty Navy</option>
+            <option value="#4f9161">Equality Green</option>
+            <option value="#faa61a">Legacy Yellow</option>
+            <option value="#151721">Legacy Charcoal</option>
           </select>
         </div>
       </div>
@@ -43,11 +45,13 @@ const TextEditor: FunctionComponent<{
               onChange(text, foregroundColour, ev.currentTarget.value);
             }}
           >
-            <option value="#151721">Charcoal</option>
-            <option value="#faa61a">Yellow</option>
+            <option value="#ff6400">Democrat Orange</option>
+            <option value="#ff0075">Community Magenta</option>
             <option value="#ffffff">White</option>
-            <option value="#072f5f">Navy</option>
-            <option value="#f95f53">Coral</option>
+            <option value="#072f5f">Liberty Navy</option>
+            <option value="#4f9161">Equality Green</option>
+            <option value="#faa61a">Legacy Yellow</option>
+            <option value="#151721">Legacy Charcoal</option>
           </select>
         </div>
       </div>
